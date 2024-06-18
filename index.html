@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book marker</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+<!-- ? google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- ? bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="p-relative">
+    <div class="overlay" id="overlay"></div>
+    <section class="">
+      <div
+        class="container d-flex flex-column justify-content-center align-items-center"
+      >
+        <h1 class="mb-3">Bookmarker</h1>
+        <div
+          class="content-bookmark w-100 p-3 mt-5 d-flex flex-column justify-content-center align-items-center gap-4"
+        >
+          <h2 class="pt-2">
+            <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div class="siteName w-100 d-flex flex-column fw-bold">
+            <label for="s-Name" class="fw-bold"
+              ><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label
+            >
+            <input
+              type="text"
+              class="form-control mt-2"
+              id="s-Name"
+              placeholder="Bookmark Name"
+            />
+          </div>
+          <div class="siteUrl w-100 d-flex flex-column fw-bold">
+            <label for="s-url" class="fw-bold"
+              ><i class="fa-solid fa-link pe-2"></i> Site URL</label
+            >
+            <input
+              type="text"
+              class="form-control mt-2"
+              id="s-url"
+              placeholder="Website URL"
+            />
+          </div>
+          <button
+            class="btn btn-submit subBtn px-5 text-light mb-2"
+            id="submit"
+          >
+            Submit
+          </button>
+        </div>
+        <div class="search w-100">
+          <input
+            type="search"
+            class="mt-3 form-control"
+            name=""
+            id="search"
+            placeholder="Search Here"
+          />
+        </div>
+        <table class="table mt-4 bg-light text-center">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="showData"></tbody>
+        </table>
+      </div>
+    </section>
+    <main class="alertError bg-light" id="alertError">
+      <div class="cloors">
+        <div class="color">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="hideAlert" id="hideAlert">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="txtsalert pt-4">
+        <div class="NameUrl d-none" id="NameUrl">
+          <p class="nameUrl">
+            Site Name and URL is not valid, Please follow the rules below :
+          </p>
+          <p>
+            <i class="fa-solid fa-caret-right"></i> Site name must contain at
+            least 3 characters
+          </p>
+          <p>
+            <i class="fa-solid fa-caret-right"></i> The first letter must be
+            capitalized
+          </p>
+          <p class="d-flex">
+            <i class="fa-solid fa-caret-right"></i> Site URL must be a valid one
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
